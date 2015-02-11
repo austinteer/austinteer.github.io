@@ -1,0 +1,37 @@
+$white: #fff;
+$black: #000;
+$lightgray: #F0F0F0;
+$midgray: #BEBEBE;
+$darker: #999;
+$gold: #C7B8A3;
+$orange: #FCC140;
+
+
+/**
+* Brand variables
+**/
+
+$brand-font-1: "nimbus-sans-condensed",sans-serif;
+$brand-font-2: "adobe-garamond-pro";
+$brand-color-1: $white;
+$brand-color-2: $black;
+$brand-color-3: $orange;
+
+
+$border-width: 5px;
+
+*{
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h3, h4, h5, h6{
+	font-family: $brand-font-1;
+}
+
+p{
+	font-family: $brand-font-2;
+}
+
+a{
+	color: $brand-color-2;
+}

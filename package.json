@@ -1,0 +1,39 @@
+{
+    "name": "personal-website",
+    "version": "1.0.0",
+    "description": "My Personal site, using Jekyll, GulpJS, SASS, Inuit.CSS, & BrowserSync",
+    "main": "gulpfile.js",
+    "author": "Austin Teer",
+    "license": "ISC",
+    "devDependencies": {
+        "bower": "^1.3.12",
+        "browser-sync": "^1.3.7",
+        "gulp": "^3.8.8",
+        "gulp-autoprefixer": "1.0.0",
+        "gulp-clean": "^0.3.1",
+        "gulp-concat": "^2.4.3",
+        "gulp-filter": "^2.0.0",
+        "gulp-load-plugins": "^0.8.0",
+        "gulp-minify-css": "^0.3.4",
+        "gulp-newer": "^0.5.0",
+        "gulp-notify": "^1.3.1",
+        "gulp-ruby-sass": "^1.0.0-alpha",
+        "gulp-uglify": "^1.1.0",
+        "main-bower-files": "^2.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/austinteer/austinteer.github.io"
+    },
+    "keywords": [
+        "jekyll",
+        "gulp",
+        "sass",
+        "browsersync",
+        "inuit"
+    ],
+    "bugs": {
+        "url": "https://github.com/austinteer/austinteer.github.io/issues"
+    },
+    "homepage": "http://austinteer.com"
+}

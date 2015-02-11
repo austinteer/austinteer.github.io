@@ -1,0 +1,35 @@
+.header{
+	&__titles{
+		.titles{
+			margin: 0;
+			color: $white;
+			text-align: center;
+			font-size: em(36);
+
+			a{
+				color: $white;
+			}
+			
+			&--small{
+				font-size: em(20);
+			}
+		
+		}
+	}
+
+	&__menu{
+		height: 100%;
+		transition: all .5s linear;
+
+		&:hover{
+			background-color: white;
+
+		}
+	}
+	
+	&__titles, &__menu{
+		display: table-cell;
+	}
+
+
+}

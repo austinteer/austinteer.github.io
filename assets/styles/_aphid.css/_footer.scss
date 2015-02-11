@@ -1,0 +1,56 @@
+.footer{
+	text-align: center;
+	margin: em(80) auto 0;
+	width: 100%;
+	padding: em(40) em(20);
+
+}
+
+.contact{	
+	a{
+		color: $black;
+		font-size: em(20);
+		font-weight: bold;
+		font-family: $brand-font-1;
+		padding: 0 em(20);
+		line-height: em(30);
+	}	
+}
+
+.big-slash{
+	font-weight: bold;
+	font-size: em(30);
+	color: $black;
+	line-height: em(30);
+}
+
+.data-hover{
+	position: relative;
+	
+	&::before{
+		content: attr(data-hover-info);
+		width: 100%;
+		top: 0;
+		left: 0;
+		text-align: center;
+		position: absolute;
+		opacity: 0;
+		transition: all .5s ease;
+	}
+	&:hover::before{
+		top: -25px;
+		opacity: 1;
+	}
+}	
+
+.no-opacity{
+	.data-hover{
+		&::before{
+			display: none;
+		}
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

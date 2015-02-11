@@ -1,0 +1,31 @@
+.block-list{
+	width: 100%;
+	display: table;
+	margin: 0;
+	padding: 0;
+}
+
+.block-list__item{
+	display: table-cell;
+
+	a{
+		display: block;
+		width: 100%;
+		line-height: em(60);
+		background: $white;
+		font-family: $brand-font-1;
+		color: $black;
+		font-size: em(20);
+		transition: all .5s ease;
+		font-weight: bold;
+
+		&:hover{
+			background: $black;
+			color: $white;
+		}
+
+
+	}
+
+}
+

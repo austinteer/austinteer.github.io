@@ -1,0 +1,34 @@
+{
+    "name": "austinteer.com website",
+    "version": "0.0.0",
+    "authors": [
+        "Austin Teer <austinteer@gmail.com>"
+    ],
+    "description": "Assets for austinteer.com",
+    "main": "assets",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "app/bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "modernizr": "~2.6.2",
+        "jquery": "~1.11.0",
+        "inuit-clearfix": "~0.2.1",
+        "inuit-widths-responsive": "~0.1.3",
+        "inuit-responsive-settings": "~0.1.3",
+        "inuit-widths": "~0.3.2",
+        "inuit-layout": "~0.3.2",
+        "inuit-flag": "~0.3.2",
+        "inuit-mixins": "~0.2.3",
+        "inuit-defaults": "~0.2.1",
+        "inuit-page": "~0.2.1",
+        "inuit-functions": "~0.2.0",
+        "inuit-normalize": "~3.0.1"
+    }
+}

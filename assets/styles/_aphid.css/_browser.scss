@@ -1,0 +1,43 @@
+.browser{
+	position: relative;
+	width: 80%;
+	margin: em(20) auto;
+
+	&__bar{
+		position: relative;
+		display: block;
+		height: em(30);
+
+		&:before{
+			position: absolute;
+			content: "X";
+			font-weight: bold;
+			top: 0;
+			left: 0;
+			font-family: $brand-font-1;
+			text-align: center;
+			line-height: em(30);
+			height: em(30);
+			width: em(30);
+			font-size: em(15);
+			border-right: solid em(5) $black;
+		}
+
+		&:after{
+			position: absolute;
+			content: "-";
+			font-weight: bold;
+			font-family: $brand-font-1;
+			text-align: center;
+			top: 0;
+			left: em(30);
+			line-height: em(30);
+			height: em(30);
+			width: em(30);
+			font-size: em(15);
+			border-right: solid em(5) $black;
+		}
+
+
+	}	
+}
