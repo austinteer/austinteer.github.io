@@ -49,13 +49,17 @@
     z-index: 9999;
 
     @include media-query(palm){
-      display: block;
       border-right-width: 0;
       border-bottom-width: 5px;
+      display: inline-block;
+      width: 50%;
     }
 
     &:last-child{
       border-bottom-width: 0;
+      @include media-query(palm){
+        width: 100%;
+      }
     }
     
     &:hover{
@@ -78,6 +82,9 @@
     transition: all .5s ease;
     width: 100%;
     display: block;
+    @include media-query(palm){
+      text-align: center;
+    }
   }
 }
 

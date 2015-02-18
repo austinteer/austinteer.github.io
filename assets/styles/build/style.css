@@ -1877,13 +1877,19 @@ a {
 }
 @media screen and (max-width: 44.9375em) {
   .main-nav li {
-    display: block;
     border-right-width: 0;
     border-bottom-width: 5px;
+    display: inline-block;
+    width: 50%;
   }
 }
 .main-nav li:last-child {
   border-bottom-width: 0;
+}
+@media screen and (max-width: 44.9375em) {
+  .main-nav li:last-child {
+    width: 100%;
+  }
 }
 .main-nav li:hover {
   background-color: #fff;
@@ -1903,6 +1909,11 @@ a {
   transition: all .5s ease;
   width: 100%;
   display: block;
+}
+@media screen and (max-width: 44.9375em) {
+  .main-nav a {
+    text-align: center;
+  }
 }
 
 .block-list {
