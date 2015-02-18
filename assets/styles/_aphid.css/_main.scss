@@ -26,7 +26,17 @@ header{
 }
 
 .hero{
-	background: url('../images/hero.jpg');
+	@include media-query(retina){
+		background-image: url('../images/hero-original.jpg');
+	}
+	@include media-query(desk){
+		background-image: url('../images/hero.jpg');
+	}
+	@include media-query(lap){
+		background-image: url('../images/hero-640.jpg');	
+	}
+
+	background-image: url('../images/hero-320.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	position: relative;
