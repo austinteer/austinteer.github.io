@@ -1941,6 +1941,19 @@ a {
   background: #000;
   color: #fff;
 }
+.block-list__item--palm {
+  display: block;
+  border-right-width: 0;
+}
+@media screen and (min-width: 45em) {
+  .block-list__item--palm {
+    display: table-cell;
+    border-right-width: 5px;
+  }
+  .block-list__item--palm:last-child {
+    border-right-width: 0;
+  }
+}
 
 .footer {
   text-align: center;

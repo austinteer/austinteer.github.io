@@ -23,8 +23,18 @@
 			background: $black;
 			color: $white;
 		}
-
-
+	}
+	
+	&--palm{
+		display: block;
+		border-right-width: 0;
+			@include media-query(lap-and-up) {		
+				display: table-cell;
+				border-right-width: 5px;
+				&:last-child{
+					border-right-width: 0;
+				}
+			}
 	}
 
 }
