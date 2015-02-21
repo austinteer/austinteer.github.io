@@ -12,12 +12,18 @@ var jsFilter = $.filter('*.js');
  * Dest/src variables
  ********/
 
-var scssMainFile = 'assets/styles/';
-var cssExpanded = 'assets/styles/build/';
+var scssMainFile = 'assets/_styles/';
+var cssExpanded = 'assets/_styles/build/';
 var finalCSS = 'assets/css';
 var jsFiles = 'assets/js/*.js';
 var finalJS = 'assets/js';
-var bowerFiles = 'assets/_bower_components/'
+var bowerFiles = 'assets/_bower_components/';
+
+options = {
+    uncss: {
+        html: ["_site/index.html"]
+    }
+};
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -57,16 +63,18 @@ gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
  */
 
 gulp.task('styles', function() {
-    return $.rubySass('assets/styles/', {
+    return $.rubySass('assets/_styles/', {
         style: "expanded"
     })
         .on('error', function(err) {
             console.error('Error!', err.message);
         })
         .pipe($.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('assets/styles/build'))
+        .pipe(gulp.dest('assets/_styles/build'))
+        .pipe($.uncss(options.uncss))
         .pipe($.minifyCss({
-            keepSpecialComments: 1
+            keepBreaks: false,
+            keepSpecialComments: 0
         }))
         .pipe(gulp.dest('assets/css'))
         .pipe($.notify({
@@ -81,9 +89,10 @@ gulp.task('styles', function() {
  */
 
 gulp.task('scripts', function() {
-    return gulp.src([, 'assets/js/jquery.js', 'assets/js/*.js', '!assets/js/app.js', '!assets/js/modernizr.js'])
+    return gulp.src([, 'assets/js/*.js', '!assets/js/app.js', '!assets/js/modernizr.js'])
         .pipe($.newer('app.js'))
         .pipe($.concat('app.js'))
+        .pipe($.uglify())
         .pipe(gulp.dest(finalJS));
     browserSync.reload();
 });
@@ -91,7 +100,7 @@ gulp.task('scripts', function() {
 
 gulp.task('modernizr', function() {
     return gulp.src(bowerFiles + 'modernizr/modernizr.js')
-        .pipe($.filter())
+        .pipe($.uglify())
         .pipe(gulp.dest(finalJS));
 });
 
@@ -101,13 +110,12 @@ gulp.task('bowerJSFiles', function() {
         .pipe(gulp.dest(finalJS));
 });
 
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function() {
-    gulp.watch('assets/styles/**/*.scss', ['styles', 'jekyll-rebuild']);
+    gulp.watch('assets/_styles/**/*.scss', ['styles', 'jekyll-rebuild']);
     gulp.watch('assets/js/*.app', ['scripts', 'jekyll-rebuild']);
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
