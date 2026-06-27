@@ -26,6 +26,8 @@ header{
 }
 
 .hero{
+	background-image: url('../images/hero-640.jpg');
+
 	@include media-query(desk){
 		background-image: url('../images/hero.jpg');
 	}
@@ -33,7 +35,6 @@ header{
 		background-image: url('../images/hero-50.jpg');	
 	}
 
-	background-image: url('../images/hero-640.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	position: relative;
@@ -105,4 +106,3 @@ a{
 	}
 
 }
-

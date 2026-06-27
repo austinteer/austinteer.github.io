@@ -1,4 +1,13 @@
 name: Austin Teer
-markdown: redcarpet
-highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json", "assets/_bower_components", "styles"]
+title: Austin Teer
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - assets/_styles
+  - assets/_vendor
