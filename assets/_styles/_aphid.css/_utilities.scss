@@ -1,9 +1,0 @@
-@function em($target, $context: 16) {
-	@return ($target / $context) * 1em;
-}
-
-@mixin hide-text{
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-}
