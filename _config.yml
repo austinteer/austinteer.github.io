@@ -1,4 +1,6 @@
 name: Austin Teer
-markdown: redcarpet
-highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json", "assets/_bower_components", "styles"]
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - node_modules
+  - .jekyll-cache
