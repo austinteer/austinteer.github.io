@@ -1,4 +1,5 @@
 name: Austin Teer
+description: Principal Engineer at Stitch Fix focused on web product experiences, scalable interfaces, and engineering systems.
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json", "assets/_bower_components", "styles"]
