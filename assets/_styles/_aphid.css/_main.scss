@@ -80,6 +80,10 @@ a{
 	margin: 0 auto;
 }
 
+.content--center + .content--center{
+	margin-top: 1.5em;
+}
+
 .align-center{
 	text-align: center;
 }
@@ -105,4 +109,3 @@ a{
 	}
 
 }
-
